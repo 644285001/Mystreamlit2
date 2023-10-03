@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score,mean_squared_error
 
-df=pd.read_csv("./data/stock_index_price.csv")
+df=pd.read_csv('/content/stock_index_price.csv')
 df.head(3)
 
 x=df[['interest_rate','unemployment_rate']]
@@ -21,3 +21,5 @@ modelRegress.fit(x_train,y_train)
 
 x_input=[[2,5],[2.2,5.7]]
 y_predict=modelRegress.predict(pf.fit_transform(x_input))
+y_predict=modelRegress.predict(x_test)
+y_predict
